@@ -2,12 +2,14 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoClient = require("mongodb").MongoClient;
 const objectId = require("mongodb").ObjectID;
+const mongoose = require("mongoose");
 
 const app = express();
 const jsonParser = bodyParser.json();
 const url = "mongodb://localhost:27017/usersdb";
 
 app.use(express.static(__dirname + "/public"));
+
 
 app.get("/api/users", function(req, res){
 
