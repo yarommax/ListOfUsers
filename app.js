@@ -10,7 +10,6 @@ const url = "mongodb://localhost:27017/usersdb";
 
 app.use(express.static(__dirname + "/public"));
 
-
 app.get("/api/users", function(req, res){
 
     mongoClient.connect(url,{ useNewUrlParser: true },function(err,client){
